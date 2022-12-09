@@ -1,4 +1,4 @@
-package com.vector;
+package com.vector.turing.code;
 
 import java.math.BigInteger;
 

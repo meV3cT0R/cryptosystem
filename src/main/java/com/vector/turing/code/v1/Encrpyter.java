@@ -1,6 +1,11 @@
-package com.vector;
+package com.vector.turing.code.v1;
 
 import java.math.BigInteger;
+
+import com.vector.turing.code.Code;
+import com.vector.turing.code.GodEncrypter;
+import com.vector.turing.code.SecretKey;
+import com.vector.turing.code.SecretKeyException;
 
 public class Encrpyter implements GodEncrypter{
     private final SecretKey secretKey;
@@ -20,12 +25,11 @@ public class Encrpyter implements GodEncrypter{
                 }
             }
         }
-        System.out.println(encode);
+        
         BigInteger encodeBI = new BigInteger(encode.toString()+"0000");
-        System.out.println(encodeBI);
         if(!encodeBI.isProbablePrime(10)){
             encodeBI = encodeBI.nextProbablePrime();
-            System.out.println(encodeBI);
+
         }
         BigInteger encoded = encodeBI.multiply(secretKey.get());
         return encoded;
