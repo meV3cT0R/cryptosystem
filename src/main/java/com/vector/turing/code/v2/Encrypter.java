@@ -30,7 +30,7 @@ public class Encrypter {
         
         if(encoded.compareTo(publicKey.get()) == 1) throw new Exception("Message to long");
         encoded = encoded.multiply(secretKey.get()).remainder(publicKey.get());
-        return encoded;  
+        return encoded;    
     }
 
 }
