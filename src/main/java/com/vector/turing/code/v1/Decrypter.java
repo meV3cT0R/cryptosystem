@@ -18,7 +18,7 @@ public class Decrypter {
         BigInteger decode = encryptedMessage.divide(secretKey.get());
         String decoding = decode.toString();
         
-        if(Integer.parseInt(decoding.substring(0,2)) > 26)
+        if(decoding.length()%2!=0)
             decoding = "0" + decoding; 
         StringBuffer decoded = new StringBuffer();
         

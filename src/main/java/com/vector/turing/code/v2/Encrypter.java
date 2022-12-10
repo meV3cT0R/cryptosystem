@@ -17,16 +17,17 @@ public class Encrypter {
     }
     
     public BigInteger encrypt() throws Exception {
-        System.out.println("[Log][INFO] Inside Encrypter.encrypt()");
         StringBuffer encode = new StringBuffer();
+        
         for(int i=0; i< message.length();i++) {
             for(int j=0; j<Code.code.length;j++) {
                 if(String.valueOf(message.charAt(i)).toUpperCase().equals(Code.code[j][1]))
                 encode.append(Code.code[j][0]);
             }
         }
+        if(encode.length()<1) throw new Exception("Empty message");
+        System.out.printf("[LOG][INFO] encode : %s%n ",encode.toString());
         BigInteger encoded = new BigInteger(encode.toString());
-        System.out.printf("[Log][INFO] encoding Value : %s%n",encoded.toString());
         
         if(encoded.compareTo(publicKey.get()) == 1) throw new Exception("Message to long");
         encoded = encoded.multiply(secretKey.get()).remainder(publicKey.get());
