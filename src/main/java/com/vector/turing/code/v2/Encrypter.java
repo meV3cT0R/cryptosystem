@@ -32,4 +32,5 @@ public class Encrypter {
         encoded = encoded.multiply(secretKey.get()).remainder(publicKey.get());
         return encoded;
     }
+    
 }

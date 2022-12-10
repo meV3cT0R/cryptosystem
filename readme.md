@@ -25,9 +25,5 @@
 
     Encryption : m* = rem(mk,p) <br />
     Decryption : m = rem(m*k<sup>-1</sup>,p)
-        {
-            m*k<sup>-1</sup> = rem(mk,p)k<sup>-1</sup> (mod p)
-                         ≅ mkk<sup>-1</sup>
-                         ≅ m
-        }
+        
         
