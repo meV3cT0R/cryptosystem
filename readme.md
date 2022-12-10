@@ -1,7 +1,6 @@
 # Cryptosystems
 1. <h2>Turing's Code (version 1.0) </h2>
-    Turing's Code is a secret-key cryptosystem. This Code was made by 
-    Alan Turing. 
+    Turing's Code is a secret-key cryptosystem. 
 
     Text message is translated into an integer in order to perform mathematical Calculation. Translated integer must be prime . If it 
     is not a prime number we may need to pad the integer with more digits to make a prime.
