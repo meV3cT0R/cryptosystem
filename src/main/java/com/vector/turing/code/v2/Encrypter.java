@@ -6,9 +6,9 @@ import com.vector.turing.code.Code;
 import com.vector.turing.code.Key;
 
 public class Encrypter {
-    private Key publicKey;
-    private Key secretKey;
-    private String message;
+    private final Key publicKey;
+    private final  Key secretKey;
+    private final String message;
 
     public Encrypter(Key publicKey, Key secretKey, String message) {
         this.publicKey = publicKey;

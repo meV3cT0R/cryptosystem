@@ -6,9 +6,9 @@ import com.vector.turing.code.Code;
 import com.vector.turing.code.Key;
 
 public class Decrypter {
-    private Key publicKey;
-    private Key secretKey;
-    private BigInteger message;
+    private final Key publicKey;
+    private final Key secretKey;
+    private final BigInteger message;
 
 
     public Decrypter(Key publicKey, Key secretKey, BigInteger message) {
