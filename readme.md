@@ -1,5 +1,5 @@
 # Cryptosystems
-1. Turing's Code (version 1.0)
+1. <h2>Turing's Code (version 1.0) <h2>
     Turing's Code is a secret-key cryptosystem. This Code was made by 
     Alan Turing. 
 
@@ -14,3 +14,20 @@
 
     Encryption : m* = mk
     Decryption : m = m*/k
+
+2. <h2> Turing's Code (version 2.0) </h2>
+    Turing's Code v1 is easy to break, the second time you send the
+    message the gcd of previous message and current message gives you the key.
+
+    Turing's Code v2 doesn't require message to be a prime.
+
+    Before Hand : exchange the public key, It must be large prime number (p) and secret key (k) can be any number from {1,2,...,p-1}
+
+    Encryption : m* = rem(mk,p)
+    Decryption : m = rem(m*k<sup>-1</sup>,p)
+        {
+            m*k<sup>-1</sup> = rem(mk,p)k<sup>-1</sup> (mod p)
+                         ≅ mkk<sup>-1</sup>
+                         ≅ m
+        }
+        

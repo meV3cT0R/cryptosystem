@@ -3,13 +3,13 @@ package com.vector.turing.code.v1;
 import java.math.BigInteger;
 
 import com.vector.turing.code.Code;
-import com.vector.turing.code.SecretKey;
+import com.vector.turing.code.Key;
 
 public class Decrypter {
-    private final SecretKey secretKey;
+    private final Key secretKey;
     private final BigInteger encryptedMessage;
 
-    public Decrypter(SecretKey secretKey, BigInteger encryptedMessage) {
+    public Decrypter(Key secretKey, BigInteger encryptedMessage) {
         this.secretKey = secretKey;
         this.encryptedMessage = encryptedMessage;
     }

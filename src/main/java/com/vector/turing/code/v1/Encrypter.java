@@ -4,14 +4,14 @@ import java.math.BigInteger;
 
 import com.vector.turing.code.Code;
 import com.vector.turing.code.GodEncrypter;
-import com.vector.turing.code.SecretKey;
+import com.vector.turing.code.Key;
 import com.vector.turing.code.SecretKeyException;
 
-public class Encrpyter implements GodEncrypter{
-    private final SecretKey secretKey;
+public class Encrypter implements GodEncrypter{
+    private final Key secretKey;
     private final String message;
 
-    public Encrpyter(SecretKey secretKey,String message) throws SecretKeyException{;
+    public Encrypter(Key secretKey,String message) throws SecretKeyException{;
         this.secretKey = secretKey;
         this.message = message;
     }

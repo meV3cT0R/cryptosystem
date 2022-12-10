@@ -1,10 +1,11 @@
 package com.vector;
 
 import java.math.BigInteger;
+import java.util.Random;
 
 public class BigIntegerTest {
     public static void main(String[] args) {
-        BigInteger num1 = new BigInteger("2");
+        BigInteger num1 = new BigInteger("11");
         BigInteger num2 = new BigInteger("3");
         System.out.println(num1.add(num2));
         BigInteger num3 = new BigInteger("0805121215081523011805251521");
@@ -21,5 +22,17 @@ public class BigIntegerTest {
         String hello = "Hello";
         String he = hello.substring(0,2);
         System.out.println(he);
+
+
+        System.out.println(BigInteger.probablePrime(200, new Random()));
+        BigInteger m = new BigInteger("4");
+        BigInteger k = new BigInteger("5");
+        BigInteger p = new BigInteger("11");
+        
+        System.out.println(m.multiply(k).remainder(p));
+        System.out.println(
+            k.modInverse(p)+ "\n"+
+            m.multiply(k.modInverse(p)).remainder(p)
+        );
     }
 }
